@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("view-mountain-landscape-against-sky.jpg");
+    background-position: center;
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;  
+    height: 100vh;                
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+/* Create a blurred layer */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  z-index: -1;
+  transform: scale(1.05);
+}
+.header{
+    color: white;
+    background-color: black;
+    align-items: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    margin-left: 15px;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    list-style-type: none;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.nav-bar ul{
+    list-style-type: none;
+    display: flex;
+}
+.nav-bar ul li a {
+    justify-content: space-between;
+    display: inline-flex;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.nav-bar ul li{
+    padding: 20px;
+    list-style-type: none;
+    margin: auto;
+    font-style: normal;
+    font-weight: bold;
+}
+.nav-bar ul li a:hover{
+    border: transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    transition: all 0.35s ease;
+}
+.nav-button{
+    border: 4px solid transparent;
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 8px;
+    margin-left: 10px;
+    transition: all 0.4s ease;
+}
+.nav-button:hover{
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+fieldset{
+    width: 600px;
+    height: 440px;
+    margin: auto;
+    margin-top: 11%;
+    border: none;
+}
+.header-2{
+    text-align: center;
+    margin: 15px;
+    font-size:30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.username, .password{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+input[type="text"], input[type="password"]{
+    width: 450px;
+    height: 50px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 2px solid rgb(168, 168, 168);
+    padding-left: 10px;
+}
+::placeholder{
+    font-size: 15px;
+    padding-left: 10px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.option {
+    margin-left: 75px;
+    font-size: 15px;
+    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px 0 20px 75px;
+}
+label[for="Remember-me"]{
+    margin-left: 5px;
+}
+ p {
+    display: inline-flex;
+    justify-content:space-between;
+    margin-left: 215px;
+}
+p a{
+    text-decoration: none;
+    color: black;
+}
+input[type="checkbox"]{
+    color: blue;
+    margin-top: 2px;
+}
+.login-button{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+input[type="button"]{
+    width: 430px;
+    height: 50px;
+    border: 4px solid transparent;
+    border-radius: 30px;
+    transition: all 0.35s ease;
+    cursor: pointer;
+    background-color: rgb(0, 177, 0);
+    color: white;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+input[type="button"]:hover{
+    background-color: green;
+    padding: 10px 20px;
+    width: 450px;
+    height: 55px;
+    border-radius: 50px;
+    position: relative;
+}
+.signup-option{
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.signup-option a{
+    color: blue;
+}
+
+/* ---- RESPONSIVE TUNING ----
+   Reduce blur & scale on smaller devices to improve performance & readability.
+*/
+@media (max-width: 1440px) {
+  .bg { filter: blur(3px); transform: scale(1.04); }
+  .header { padding: 10px 18px; }
+  .main { padding: 40px 16px; }
+}
+
+  /* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+    .header{
+        overflow: scroll;
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .nav-bar{
+        margin-left: 0;
+    }
+}
